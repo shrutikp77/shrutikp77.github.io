@@ -6,6 +6,33 @@ export default function Projects() {
   
   const projects = [
     {
+      title: "Hand Glove Detection System",
+      year: "2025",
+      description: "Built real-time hand detection, glove classification system using YOLOv8 achieving 88% precision, 85% recall, 82% mAP@0.5. Developed safety compliance pipeline with 91% classification accuracy and critical miss rate reduced to under 3%. Optimized for production deployment with 15 FPS inference speed, data augmentation, and automated JSON logging system.",
+      technologies: ["Python", "YOLOv8", "OpenCV", "PyTorch"],
+      category: "cv",
+      link: "#",
+      isLive: false
+    },
+    {
+      title: "Sentiment Analysis with BERT",
+      year: "2025",
+      description: "Trained a sentiment analysis model on the Twitter dataset with three validation splits, improving sentiment generalization. Fine-tuned a BERT-based transformer model using Hugging Face and AdamW optimizer, achieving a 90.08% F1 score. Designed a real-time sentiment prediction demo app with Gradio, integrating the pre-trained model for user interactions.",
+      technologies: ["NLP", "LLMs", "BERT", "Hugging Face", "Gradio"],
+      category: "nlp",
+      link: "#",
+      isLive: false
+    },
+    {
+      title: "AI Agent for Trend Analysis",
+      year: "2025",
+      description: "Built multi-agent NLP pipeline to classify and analyze 50K+ app reviews with 85% deduplication accuracy. Applied SentenceTransformer embeddings + FAISS clustering preventing 89+ duplicate topics improving trend detection. Enabled automated topic evolution tracking, discovering new issue categories and generating trend matrices.",
+      technologies: ["Python", "SentenceTransformers", "scikit-learn", "FAISS"],
+      category: "nlp",
+      link: "#",
+      isLive: false
+    },
+    {
       title: "Clutch Performance Detection in T20 Cricket",
       year: "2024",
       description: "Engineered a win probability model using logistic regression on over 15K deliveries to quantify clutch performance. Improved player ranking accuracy by 37% through Bayesian inference and data processing of over 1M deliveries.",
