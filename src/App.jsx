@@ -10,9 +10,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-pink-50 dark:bg-gray-900">
       <Navbar />
-      {/* Main Content Container - Centered with constrained width */}
-      <main className="max-w-4xl mx-auto px-6 sm:px-10 py-10 md:py-16">
-        <div className="space-y-16">
+      {/* Main Content Container - Focused reading width inspired by minimal portfolios */}
+      <main className="max-w-2xl mx-auto px-5 sm:px-6 py-8 sm:py-12">
+        <div className="space-y-14 sm:space-y-16">
           <Hero />
           <Projects />
           <Resume />

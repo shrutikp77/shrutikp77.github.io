@@ -1,70 +1,63 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 
-// Main Projects Component
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  
+
   const projects = [
     {
       title: "Acquir Managed Offices",
-      year: "2025 - 2026",
-      description: "Official web platform for Acquir Managed Offices, a flexible workspace brand owned by an NSE-listed firm entity. Built with React and Vite for sub-second page loads, integrated with Sanity CMS for marketing blogs, and optimized for search crawler indexing.",
+      year: "2025 – 2026",
+      description: "Official web platform for Acquir Managed Offices, owned by an NSE-listed firm entity. Built with React and Vite for fast load speeds, integrated with Sanity CMS for editorial content, and optimized for SEO.",
       technologies: ["React", "Vite", "Sanity CMS", "Tailwind CSS", "SEO"],
       category: "web",
       link: "https://acquir.in/",
-      isLive: true
+      isLive: true,
+      linkType: "Website"
     },
     {
       title: "Emcee Manoj — Portfolio",
       year: "2025",
-      description: "Portfolio website built for Emcee Manoj, a leading corporate and wedding anchor with 1,000+ shows across India. Built with interactive multimedia galleries, video showcases, and a streamlined event inquiry system.",
-      technologies: ["React", "Tailwind CSS", "Vite", "UI/UX Design"],
+      description: "Portfolio website built for Emcee Manoj, one of India's premier corporate and event anchors (1,000+ shows). Designed with interactive video showcases, client testimonials, and a seamless booking inquiry flow.",
+      technologies: ["React", "Tailwind CSS", "Vite", "UI/UX"],
       category: "web",
       link: "https://www.emceemanoj.in/",
-      isLive: true
+      isLive: true,
+      linkType: "Website"
     },
     {
       title: "BooksThatFeelLikeThis (BookMatch.AI)",
       year: "2024",
-      description: "A multimodal book recommendation engine where you describe what kind of book you feel like reading. Combines text embeddings (MiniLM) and image aesthetics (CLIP) across 20,000+ books with FAISS vector search. Deployed live on Hugging Face Spaces.",
-      technologies: ["Python", "PyTorch", "Hugging Face Spaces", "CLIP", "MiniLM", "FAISS"],
+      description: "Multimodal book discovery engine where readers describe what kind of book they feel like reading. Combines CLIP and MiniLM embeddings across 20,000+ books with FAISS vector search.",
+      technologies: ["Python", "PyTorch", "Hugging Face", "CLIP", "FAISS"],
       category: "ml",
       link: "https://huggingface.co/spaces/Shrutikp70/BookMatch.AI",
-      isLive: true
+      isLive: true,
+      linkType: "Hugging Face"
     },
     {
       title: "Client Web Tools & Portals",
       year: "2026",
-      description: "Currently developing 2-3 custom full-stack web applications for independent businesses and creators, focusing on lightweight dashboards and clean user workflows.",
+      description: "Currently building custom lightweight web applications and client management dashboards for independent businesses and creators.",
       technologies: ["React", "Vite", "Tailwind CSS", "REST APIs"],
       category: "web",
       link: "#",
       isLive: false
     },
     {
-      title: "Hand Glove Detection System",
+      title: "Hand Glove Safety Detection",
       year: "2025",
-      description: "Real-time safety compliance tool built with YOLOv8 to verify whether industrial workers are wearing protective gear. Achieved 88% precision and 85% recall, optimized to run at 15 FPS with automatic compliance logging.",
+      description: "Industrial safety compliance system using YOLOv8 to verify personal protective equipment in real-time at 15 FPS, logging incidents with 88% precision.",
       technologies: ["Python", "YOLOv8", "OpenCV", "PyTorch"],
       category: "cv",
       link: "#",
       isLive: false
     },
     {
-      title: "BERT Sentiment Analysis",
+      title: "BERT Sentiment Classifier",
       year: "2025",
-      description: "Fine-tuned a BERT transformer on Twitter data to classify sentiments across three validation splits, reaching a 90.08% F1 score. Wrapped with an interactive Gradio interface for live inference testing.",
-      technologies: ["NLP", "Transformers", "BERT", "Hugging Face", "Gradio"],
-      category: "nlp",
-      link: "#",
-      isLive: false
-    },
-    {
-      title: "Review Trend Analysis Pipeline",
-      year: "2025",
-      description: "Processed 50K+ customer app reviews using SentenceTransformers and FAISS clustering to group user feedback, identify emerging feature requests, and eliminate duplicate topics with 85% deduplication accuracy.",
-      technologies: ["Python", "SentenceTransformers", "FAISS", "scikit-learn"],
+      description: "Fine-tuned BERT transformer on conversational text achieving 90.08% F1 score, wrapped with an interactive Gradio interface for live inference testing.",
+      technologies: ["BERT", "Transformers", "Hugging Face", "Gradio"],
       category: "nlp",
       link: "#",
       isLive: false
@@ -72,85 +65,69 @@ export default function Projects() {
     {
       title: "Warehouse Inventory Forecasting",
       year: "2022",
-      description: "Won 1st place in the IIT Kharagpur Inter-Hall Data Analytics competition by forecasting warehouse SKU demand. Built an LSTM neural network on 2+ years of SKU history, improving accuracy from 48.6% to 1.31% MAPE.",
-      technologies: ["Python", "LSTM", "Time-Series", "Pandas", "NumPy"],
+      description: "Won 1st place in the IIT Kharagpur Inter-Hall Data Analytics competition. Built an LSTM neural network forecasting warehouse SKU demand down to 1.31% MAPE.",
+      technologies: ["Python", "LSTM", "Time-Series", "Pandas"],
       category: "ml",
       link: "#",
       isLive: false
     },
     {
-      title: "Clutch Performance in T20 Cricket",
+      title: "Pressure Modeling in T20 Cricket",
       year: "2024",
-      description: "Developed a win probability model using logistic regression and Bayesian inference on 1M+ ball-by-ball deliveries to measure how cricketers perform under extreme match pressure.",
-      technologies: ["Python", "Streamlit", "Bayesian Inference", "Pandas"],
+      description: "Bayesian inference model trained on 1M+ ball-by-ball deliveries to quantify player composure and performance in high-pressure match situations.",
+      technologies: ["Python", "Bayesian Stats", "Streamlit", "Pandas"],
       category: "ml",
-      link: "#",
-      isLive: false
-    },
-    {
-      title: "Zero-Shot Defect Classification",
-      year: "2023",
-      description: "Built a zero-shot defect classification model for manufacturing lines using CLIP and Vision Transformers (ViT), achieving 72% accuracy on the MVTec-AD benchmark without task-specific training data.",
-      technologies: ["Python", "PyTorch", "CLIP", "Vision Transformers"],
-      category: "cv",
       link: "#",
       isLive: false
     }
   ];
 
   const categories = [
-    { id: 'all', label: 'All Projects', count: projects.length },
-    { id: 'web', label: 'Web & Client Work', count: projects.filter(p => p.category === 'web').length },
-    { id: 'ml', label: 'Machine Learning', count: projects.filter(p => p.category === 'ml').length },
-    { id: 'nlp', label: 'NLP & LLMs', count: projects.filter(p => p.category === 'nlp').length },
-    { id: 'cv', label: 'Computer Vision', count: projects.filter(p => p.category === 'cv').length }
+    { id: 'all', label: 'All' },
+    { id: 'web', label: 'Web / Freelance' },
+    { id: 'ml', label: 'Machine Learning' },
+    { id: 'nlp', label: 'NLP' },
+    { id: 'cv', label: 'Vision' }
   ];
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const filteredProjects = selectedCategory === 'all'
+    ? projects
+    : projects.filter(p => p.category === selectedCategory || (selectedCategory === 'ml' && (p.category === 'nlp' || p.category === 'cv')));
 
   return (
-    <section id="projects" className="py-12 md:py-16">
-      {/* Header */}
-      <div className="mb-8">
-        <span className="text-xs font-bold uppercase tracking-wider text-pink-600">
-          Portfolio
-        </span>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-2">
-          Projects & Client Work
+    <section id="projects" className="space-y-6">
+      {/* Header with pill badge */}
+      <div className="space-y-2">
+        <div className="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-semibold bg-pink-100/70 text-pink-700 border border-pink-200/50">
+          My Projects
+        </div>
+        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-gray-900">
+          Check out my latest work
         </h2>
-        <p className="text-gray-600 text-sm md:text-base max-w-2xl">
-          A selection of live client websites, machine learning models, and software tools I've built.
+        <p className="text-xs sm:text-sm text-gray-500 max-w-xl">
+          A blend of live client websites, machine learning applications, and full-stack tools I've built.
         </p>
       </div>
 
-      {/* Category filter tabs */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        {categories.map((category) => (
+      {/* Filter Tabs */}
+      <div className="flex flex-wrap gap-1.5 pt-1">
+        {categories.map((cat) => (
           <button
-            key={category.id}
-            onClick={() => setSelectedCategory(category.id)}
-            className={`px-3.5 py-1.5 rounded-lg text-xs md:text-sm font-medium transition-all duration-150 cursor-pointer ${
-              selectedCategory === category.id
-                ? 'bg-pink-600 text-white shadow-xs'
-                : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
+            key={cat.id}
+            onClick={() => setSelectedCategory(cat.id)}
+            className={`px-3 py-1 rounded-md text-xs font-medium transition-colors cursor-pointer ${
+              selectedCategory === cat.id
+                ? 'bg-gray-900 text-white shadow-2xs'
+                : 'bg-white/80 text-gray-600 hover:bg-white border border-gray-200/80 hover:text-gray-900'
             }`}
           >
-            {category.label}
-            <span className={`ml-1.5 px-1.5 py-0.2 text-xs rounded font-semibold ${
-              selectedCategory === category.id
-                ? 'bg-white/20 text-white'
-                : 'bg-gray-100 text-gray-500'
-            }`}>
-              {category.count}
-            </span>
+            {cat.label}
           </button>
         ))}
       </div>
 
-      {/* Projects grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -160,6 +137,7 @@ export default function Projects() {
             tags={project.technologies}
             link={project.link}
             isLive={project.isLive}
+            linkType={project.linkType}
           />
         ))}
       </div>

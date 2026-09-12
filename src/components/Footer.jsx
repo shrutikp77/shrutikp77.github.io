@@ -1,11 +1,15 @@
+import React from 'react';
+
 export default function Footer() {
   return (
-    <footer id="contact" className="py-8 text-center text-gray-600">
-      <p>© {new Date().getFullYear()} Shrutik Patil</p>
-      <div className="flex justify-center mt-4 space-x-4">
-        <a href="https://github.com/shrutikp77" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/shrutikpatil77/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="mailto:shrutikpatil.iitkgp25@gmail.com">Email</a>
+    <footer id="contact" className="pt-10 pb-28 text-center text-xs text-gray-500">
+      <div className="max-w-2xl mx-auto px-5 space-y-3">
+        <p className="leading-relaxed">
+          Crafted with care using React & Tailwind CSS. Hosted on GitHub Pages.
+        </p>
+        <p className="text-gray-400">
+          © {new Date().getFullYear()} Shrutik Patil. Built to be minimal, humane & grounded.
+        </p>
       </div>
     </footer>
   );

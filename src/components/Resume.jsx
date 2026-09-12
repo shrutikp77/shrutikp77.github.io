@@ -1,194 +1,177 @@
-// src/pages/Resume.jsx
+import React from 'react';
 
 export default function Resume() {
   const workExperience = [
-    { 
-      company: "ConsultBae", 
-      role: "Project Coordinator – AI Data Services", 
-      date: "Jan 2026 – Mar 2026", 
-      badge: "Recent",
-      details: [
-        "Managed end-to-end delivery of three complex audio annotation workflows (Seamless 27, Seamless 29, and Hayee) totaling 750 audio files on Appen/MatrixGo.",
-        "Structured daily operations for 150+ freelancers, coordinating execution and quality control sub-teams.",
-        "Designed a multi-tier quality framework that reached 98% accuracy across batches and eliminated redundant rework cycles.",
-        "Delivered a German audio transcription proof-of-concept (call center & meeting data) with full quality validation."
+    {
+      company: "ConsultBae",
+      role: "Project Coordinator – AI Data Services",
+      date: "Jan 2026 – Mar 2026",
+      avatar: "CB",
+      avatarBg: "bg-pink-100 text-pink-700 border-pink-200",
+      bullets: [
+        "Managed delivery of three major audio annotation pipelines (Seamless 27, Seamless 29, and Hayee) totaling 750 files on Appen/MatrixGo.",
+        "Coordinated daily workflows for 150+ freelance contributors and sub-team leads.",
+        "Built a multi-tier quality framework reaching 98% accuracy and cutting rework cycles.",
+        "Ran a German speech transcription proof-of-concept for call-center and meeting datasets."
       ]
     },
-    { 
-      company: "Freelance Client Work", 
-      role: "Full-Stack Web Developer", 
-      date: "2024 – Present", 
-      badge: "Live Projects",
-      details: [
-        "Built and shipped production client websites, including acquir.in (developed for an enterprise owned by an NSE-listed firm) using React, Vite, and Sanity CMS.",
-        "Developed emceemanoj.in, a high-engagement portfolio for one of India's leading corporate event anchors.",
-        "Currently building 2-3 additional custom web tools and client management portals."
+    {
+      company: "Freelance Client Work",
+      role: "Full-Stack Web Developer",
+      date: "2024 – Present",
+      avatar: "FW",
+      avatarBg: "bg-rose-100 text-rose-700 border-rose-200",
+      bullets: [
+        "Designed and shipped acquir.in for an NSE-listed enterprise brand using React, Vite, and Sanity CMS.",
+        "Engineered emceemanoj.in, a high-converting portfolio for one of India's premier corporate event hosts.",
+        "Currently developing custom client dashboards and web tools for independent businesses."
       ]
     },
-    { 
-      company: "Darzee", 
-      role: "Software Engineer Intern", 
-      date: "May 2024 – Aug 2024", 
-      details: [
-        "Built a responsive web dashboard in React with 20+ reusable components, cutting down UI development time by 25%.",
-        "Improved the Flutter mobile app UI based on user feedback, noticeably boosting daily session duration."
+    {
+      company: "Darzee",
+      role: "Software Engineer Intern",
+      date: "May 2024 – Aug 2024",
+      avatar: "DZ",
+      avatarBg: "bg-purple-100 text-purple-700 border-purple-200",
+      bullets: [
+        "Built a responsive client dashboard in React with 20+ reusable components, cutting UI turnaround time by 25%.",
+        "Refined Flutter mobile screens based on live feedback, improving daily active session depth."
       ]
     },
-    { 
-      company: "Outlier AI", 
-      role: "AI Engineer (Contract)", 
-      date: "2025", 
-      details: [
-        "Evaluated and benchmarked instruction-following fidelity, mathematical reasoning, and Python code generation across frontier large language models."
+    {
+      company: "Outlier AI",
+      role: "AI Engineer (Contract)",
+      date: "2025",
+      avatar: "OA",
+      avatarBg: "bg-stone-100 text-stone-700 border-stone-200",
+      bullets: [
+        "Benchmarked frontier LLMs across mathematical reasoning, coding correctness, and instruction following."
       ]
     }
   ];
 
   const education = [
-    { 
-      school: "Indian Institute of Technology (IIT), Kharagpur", 
-      degree: "B.Tech + M.Tech (Dual Degree) in Chemical Engineering", 
+    {
+      school: "Indian Institute of Technology (IIT), Kharagpur",
+      degree: "B.Tech + M.Tech (Dual Degree), Chemical Engineering",
       date: "Nov 2020 – Jul 2025",
-      details: [
-        "Won 1st place in the Inter-Hall Data Analytics Competition by building an LSTM neural network that forecasted warehouse inventory on 2+ years of historical SKU data (slashed forecast error to 1.31% MAPE)."
-      ]
+      avatar: "IIT",
+      avatarBg: "bg-amber-100 text-amber-800 border-amber-200",
+      note: "Won 1st place in the Inter-Hall Data Analytics Competition by building an LSTM neural network that forecasted warehouse inventory down to 1.31% MAPE."
     }
   ];
 
-  const skillCategories = [
-    {
-      category: "Languages & Core",
-      skills: ["Python", "C++", "JavaScript", "HTML5 / CSS3", "SQL"]
-    },
-    {
-      category: "Machine Learning & NLP",
-      skills: ["PyTorch", "scikit-learn", "Hugging Face Transformers", "FAISS", "SentenceTransformers", "YOLOv8", "spaCy", "LangChain"]
-    },
-    {
-      category: "Web & Frontend",
-      skills: ["React", "Vite", "Tailwind CSS", "Sanity CMS", "Streamlit", "Gradio", "REST APIs"]
-    },
-    {
-      category: "Data Analysis & Tools",
-      skills: ["NumPy", "Pandas", "Matplotlib & Seaborn", "Plotly", "Tableau", "Power BI", "Git / GitHub", "Linux"]
-    },
-    {
-      category: "Regulatory & Financial Economics",
-      skills: ["Macroeconomics", "Monetary Economics", "Indian Financial System", "Capital Markets Regulation", "RBI / SEBI / IRDAI / NABARD Frameworks"]
-    }
+  const skills = [
+    "Python", "C++", "JavaScript", "React", "Vite", "Tailwind CSS",
+    "Sanity CMS", "PyTorch", "Hugging Face", "SentenceTransformers",
+    "FAISS", "YOLOv8", "SQL", "REST APIs", "Git", "Linux",
+    "Macroeconomics", "Monetary Policy", "Financial System Regulation"
   ];
 
   return (
-    <section id="resume" className="py-12 md:py-16">
+    <section id="resume" className="space-y-10">
       {/* Section Header */}
-      <div className="mb-10">
-        <span className="text-xs font-bold uppercase tracking-wider text-pink-600">
-          Career & Journey
-        </span>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-2">
-          Experience & Education
+      <div>
+        <h2 className="text-xl font-bold tracking-tight text-gray-900">
+          Work Experience
         </h2>
-        <p className="text-gray-600 text-sm md:text-base max-w-2xl">
-          A timeline of my work in AI data systems, software development, engineering education, and regulatory preparation.
+        <p className="text-sm text-gray-500 mt-1">
+          Roles in AI data operations, web engineering, and software development.
         </p>
       </div>
 
-      {/* Regulatory Bodies Narrative Banner */}
-      <div className="mb-12 bg-white rounded-2xl p-6 md:p-7 border border-pink-100 shadow-sm relative overflow-hidden">
-        <div className="flex items-start gap-3">
-          <span className="text-2xl mt-0.5">🏛️</span>
-          <div>
-            <div className="flex flex-wrap items-center gap-2 mb-1.5">
-              <h3 className="text-lg font-bold text-gray-900">
-                Pivoting to Indian Regulatory Bodies
-              </h3>
-              <div className="flex flex-wrap gap-1">
-                {['RBI Grade B', 'SEBI', 'IRDAI', 'NABARD'].map((tag) => (
-                  <span key={tag} className="px-2 py-0.5 text-[11px] font-semibold bg-pink-50 text-pink-700 rounded-md border border-pink-100">
-                    {tag}
-                  </span>
-                ))}
+      {/* Work List */}
+      <div className="space-y-6">
+        {workExperience.map((job, idx) => (
+          <div key={idx} className="group relative">
+            <div className="flex items-start gap-3.5">
+              {/* Avatar circle */}
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold border shrink-0 mt-0.5 ${job.avatarBg}`}>
+                {job.avatar}
               </div>
-            </div>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              I am actively preparing for regulatory examinations, focusing on Indian macroeconomic trends, monetary policy formulation, capital market supervision, and credit architecture. 
-              My aim is to apply quantitative problem-solving and systems thinking to public policy and financial governance.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      {/* Work Experience Timeline (inspired by itsshnik.github.io) */}
-      <div className="mb-14">
-        <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-          <span className="w-2 h-5 bg-pink-500 rounded"></span>
-          Work Experience
-        </h3>
-
-        <div className="relative border-l-2 border-pink-200 ml-3 md:ml-4 pl-6 md:pl-8 space-y-10">
-          {workExperience.map((job, idx) => (
-            <div key={idx} className="relative group">
-              {/* Timeline dot */}
-              <div className="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-white border-3 border-pink-500 group-hover:scale-125 transition-transform"></div>
-
-              <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-xs hover:shadow-sm transition-shadow">
-                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <h4 className="text-base font-bold text-gray-900">{job.role}</h4>
-                    <span className="text-gray-400 font-normal">at</span>
-                    <span className="font-semibold text-pink-600">{job.company}</span>
-                    {job.badge && (
-                      <span className="px-2 py-0.5 text-[10px] font-semibold bg-pink-100 text-pink-700 rounded-full">
-                        {job.badge}
-                      </span>
-                    )}
-                  </div>
-                  <span className="text-xs font-medium text-gray-500 whitespace-nowrap">
+              {/* Job Info */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline justify-between gap-2">
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-pink-600 transition-colors">
+                    {job.company}
+                  </h3>
+                  <span className="text-xs text-gray-400 font-mono shrink-0">
                     {job.date}
                   </span>
                 </div>
+                <p className="text-xs text-gray-500 font-medium mt-0.5">
+                  {job.role}
+                </p>
 
-                <ul className="list-disc list-outside ml-4 mt-3 space-y-1.5 text-xs md:text-sm text-gray-600 leading-relaxed">
-                  {job.details.map((detail, dIdx) => (
-                    <li key={dIdx}>{detail}</li>
+                {/* Bullets */}
+                <ul className="mt-2.5 space-y-1.5 text-xs text-gray-600 leading-relaxed list-disc list-outside ml-3.5">
+                  {job.bullets.map((b, bIdx) => (
+                    <li key={bIdx}>{b}</li>
                   ))}
                 </ul>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
-      {/* Education Timeline */}
-      <div className="mb-14">
-        <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-          <span className="w-2 h-5 bg-blue-500 rounded"></span>
-          Education
-        </h3>
+      {/* Regulatory Preparation Callout */}
+      <div className="rounded-xl p-4 sm:p-5 bg-white/80 backdrop-blur-sm border border-pink-200/80 shadow-xs space-y-2">
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <div className="flex items-center gap-2">
+            <span className="text-base">🏛️</span>
+            <h3 className="text-sm font-semibold text-gray-900">
+              Indian Regulatory Bodies Pivot
+            </h3>
+          </div>
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {['RBI Grade B', 'SEBI', 'IRDAI', 'NABARD'].map((tag) => (
+              <span
+                key={tag}
+                className="px-2 py-0.5 text-[10px] font-medium bg-pink-50 text-pink-700 rounded-md border border-pink-100"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+        <p className="text-xs text-gray-600 leading-relaxed">
+          Currently dedicating focused preparation to central banking, monetary economics, financial stability frameworks, and capital market supervision. 
+          Looking to bring an analytical, engineering-first perspective to economic governance and regulatory research.
+        </p>
+      </div>
 
-        <div className="relative border-l-2 border-blue-200 ml-3 md:ml-4 pl-6 md:pl-8">
+      {/* Education */}
+      <div className="space-y-4 pt-2">
+        <div>
+          <h2 className="text-xl font-bold tracking-tight text-gray-900">
+            Education
+          </h2>
+        </div>
+
+        <div className="space-y-4">
           {education.map((edu, idx) => (
-            <div key={idx} className="relative group">
-              {/* Timeline dot */}
-              <div className="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-white border-3 border-blue-500 group-hover:scale-125 transition-transform"></div>
-
-              <div className="bg-white rounded-xl p-5 border border-gray-100 shadow-xs">
-                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1.5">
-                  <div>
-                    <h4 className="text-base font-bold text-gray-900">{edu.school}</h4>
-                    <p className="text-xs md:text-sm text-gray-600 font-medium">{edu.degree}</p>
-                  </div>
-                  <span className="text-xs font-medium text-gray-500 whitespace-nowrap">
+            <div key={idx} className="flex items-start gap-3.5">
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold border shrink-0 mt-0.5 ${edu.avatarBg}`}>
+                {edu.avatar}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline justify-between gap-2">
+                  <h3 className="text-sm font-semibold text-gray-900">
+                    {edu.school}
+                  </h3>
+                  <span className="text-xs text-gray-400 font-mono shrink-0">
                     {edu.date}
                   </span>
                 </div>
-
-                {edu.details && (
-                  <ul className="list-disc list-outside ml-4 mt-3 space-y-1.5 text-xs md:text-sm text-gray-600 leading-relaxed">
-                    {edu.details.map((item, dIdx) => (
-                      <li key={dIdx}>{item}</li>
-                    ))}
-                  </ul>
+                <p className="text-xs text-gray-500 font-medium mt-0.5">
+                  {edu.degree}
+                </p>
+                {edu.note && (
+                  <p className="text-xs text-gray-600 mt-2 leading-relaxed">
+                    {edu.note}
+                  </p>
                 )}
               </div>
             </div>
@@ -196,30 +179,19 @@ export default function Resume() {
         </div>
       </div>
 
-      {/* Skills Groups */}
-      <div>
-        <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-          <span className="w-2 h-5 bg-purple-500 rounded"></span>
+      {/* Skills */}
+      <div className="space-y-3 pt-2">
+        <h2 className="text-xl font-bold tracking-tight text-gray-900">
           Skills & Toolkit
-        </h3>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {skillCategories.map((cat, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-4 border border-gray-100 shadow-xs">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2.5">
-                {cat.category}
-              </h4>
-              <div className="flex flex-wrap gap-1.5">
-                {cat.skills.map((skill, sIdx) => (
-                  <span 
-                    key={sIdx} 
-                    className="bg-gray-50 hover:bg-pink-50 hover:text-pink-700 text-gray-700 px-2.5 py-1 rounded-md text-xs font-medium border border-gray-200 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+        </h2>
+        <div className="flex flex-wrap gap-1.5">
+          {skills.map((skill, idx) => (
+            <span
+              key={idx}
+              className="px-2.5 py-1 text-xs rounded-md bg-white/80 text-gray-700 border border-gray-200 hover:border-pink-300 hover:text-pink-700 transition-colors font-medium cursor-default shadow-xs"
+            >
+              {skill}
+            </span>
           ))}
         </div>
       </div>
