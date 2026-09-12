@@ -64,14 +64,20 @@ export default function ProjectCard({ title, year, description, tags, link, isLi
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-pink-50 text-pink-700 hover:bg-pink-100 hover:text-pink-800 transition-colors shadow-xs"
               onClick={(e) => e.stopPropagation()}
             >
-              <span>{isLive ? 'Visit Live Site' : 'View Project'}</span>
+              <span>
+                {link.includes('huggingface.co')
+                  ? 'Hugging Face Space'
+                  : isLive
+                  ? 'Visit Live Site'
+                  : 'View Project'}
+              </span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
               </svg>
             </a>
           ) : (
-            <span className="text-xs text-gray-400 italic">
-              Production / Internal
+            <span className="text-xs text-gray-400 font-medium">
+              Research / Internal
             </span>
           )}
         </div>

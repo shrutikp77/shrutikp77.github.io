@@ -9,26 +9,35 @@ export default function Projects() {
     {
       title: "Acquir Managed Offices",
       year: "2025 - 2026",
-      description: "Designed and engineered the production web platform for Acquir Managed Offices, owned by an NSE-listed firm entity. Built with React and Vite for fast performance, integrated headless Sanity CMS for seamless publishing of editorial blogs, and implemented structured SEO/meta tags for search visibility.",
-      technologies: ["React", "Vite", "Sanity CMS", "Tailwind CSS", "SEO & Meta", "Responsive UI"],
+      description: "Official web platform for Acquir Managed Offices, a flexible workspace brand owned by an NSE-listed firm entity. Built with React and Vite for sub-second page loads, integrated with Sanity CMS for marketing blogs, and optimized for search crawler indexing.",
+      technologies: ["React", "Vite", "Sanity CMS", "Tailwind CSS", "SEO"],
       category: "web",
       link: "https://acquir.in/",
       isLive: true
     },
     {
-      title: "Emcee Manoj Official Portfolio",
+      title: "Emcee Manoj — Portfolio",
       year: "2025",
-      description: "Built the official brand and portfolio platform for Emcee Manoj, one of India's top corporate and wedding anchors (8+ years, 1000+ shows). Features high-energy multimedia showcases, dynamic event gallery, interactive client testimonials, and a direct inquiry booking pipeline.",
-      technologies: ["React", "Tailwind CSS", "Vite", "Responsive UI", "Multimedia Showcase"],
+      description: "Portfolio website built for Emcee Manoj, a leading corporate and wedding anchor with 1,000+ shows across India. Built with interactive multimedia galleries, video showcases, and a streamlined event inquiry system.",
+      technologies: ["React", "Tailwind CSS", "Vite", "UI/UX Design"],
       category: "web",
       link: "https://www.emceemanoj.in/",
       isLive: true
     },
     {
-      title: "Client Platforms & Web Portals",
+      title: "BooksThatFeelLikeThis (BookMatch.AI)",
+      year: "2024",
+      description: "A multimodal book recommendation engine where you describe what kind of book you feel like reading. Combines text embeddings (MiniLM) and image aesthetics (CLIP) across 20,000+ books with FAISS vector search. Deployed live on Hugging Face Spaces.",
+      technologies: ["Python", "PyTorch", "Hugging Face Spaces", "CLIP", "MiniLM", "FAISS"],
+      category: "ml",
+      link: "https://huggingface.co/spaces/Shrutikp70/BookMatch.AI",
+      isLive: true
+    },
+    {
+      title: "Client Web Tools & Portals",
       year: "2026",
-      description: "Currently developing 2-3 custom web applications and bespoke client management tools for emerging businesses, implementing scalable React architectures, API integrations, and intuitive user workflows.",
-      technologies: ["React", "Vite", "Tailwind CSS", "REST APIs", "Modern Web Architecture"],
+      description: "Currently developing 2-3 custom full-stack web applications for independent businesses and creators, focusing on lightweight dashboards and clean user workflows.",
+      technologies: ["React", "Vite", "Tailwind CSS", "REST APIs"],
       category: "web",
       link: "#",
       isLive: false
@@ -36,62 +45,53 @@ export default function Projects() {
     {
       title: "Hand Glove Detection System",
       year: "2025",
-      description: "Built a real-time glove detection & classification system using YOLOv8, achieving 88% precision, 85% recall, and 82% mAP@0.5. Developed an industrial safety compliance pipeline with 91% classification accuracy and critical miss rate under 3%; optimized to 15 FPS inference.",
-      technologies: ["Python", "YOLOv8", "OpenCV", "PyTorch", "Safety Compliance"],
+      description: "Real-time safety compliance tool built with YOLOv8 to verify whether industrial workers are wearing protective gear. Achieved 88% precision and 85% recall, optimized to run at 15 FPS with automatic compliance logging.",
+      technologies: ["Python", "YOLOv8", "OpenCV", "PyTorch"],
       category: "cv",
       link: "#",
       isLive: false
     },
     {
-      title: "Sentiment Analysis with BERT",
+      title: "BERT Sentiment Analysis",
       year: "2025",
-      description: "Fine-tuned a BERT transformer on the Twitter dataset using the AdamW optimizer, achieving a 90.08% F1 score across three validation splits. Built a real-time Gradio sentiment prediction demo integrating the fine-tuned model for interactive user inference.",
-      technologies: ["NLP", "Transformers", "BERT", "Hugging Face", "Gradio", "PyTorch"],
+      description: "Fine-tuned a BERT transformer on Twitter data to classify sentiments across three validation splits, reaching a 90.08% F1 score. Wrapped with an interactive Gradio interface for live inference testing.",
+      technologies: ["NLP", "Transformers", "BERT", "Hugging Face", "Gradio"],
       category: "nlp",
       link: "#",
       isLive: false
     },
     {
-      title: "AI Agent for Trend Analysis",
+      title: "Review Trend Analysis Pipeline",
       year: "2025",
-      description: "Built a multi-agent NLP pipeline classifying 50K+ app reviews with 85% deduplication accuracy via SentenceTransformer embeddings + FAISS clustering. Enabled automated topic-evolution tracking, prevented 89+ duplicate topics, and generated trend matrices for product insights.",
-      technologies: ["Python", "SentenceTransformers", "FAISS", "scikit-learn", "Multi-Agent NLP"],
+      description: "Processed 50K+ customer app reviews using SentenceTransformers and FAISS clustering to group user feedback, identify emerging feature requests, and eliminate duplicate topics with 85% deduplication accuracy.",
+      technologies: ["Python", "SentenceTransformers", "FAISS", "scikit-learn"],
       category: "nlp",
-      link: "#",
-      isLive: false
-    },
-    {
-      title: "BooksThatFeelLikeThis",
-      year: "2024",
-      description: "Built a multimodal book recommendation engine combining MiniLM text and CLIP image embeddings across a 20K+ book corpus. Achieved 82% Precision@5, improving accuracy by 12% over the baseline MiniLM-only model with an adjustable weighting interface.",
-      technologies: ["Python", "PyTorch", "MiniLM-L6-v2", "CLIP", "FAISS Vector Search"],
-      category: "ml",
       link: "#",
       isLive: false
     },
     {
       title: "Warehouse Inventory Forecasting",
       year: "2022",
-      description: "Predicted monthly warehouse inventory using ML and time-series models on 2+ years of historical SKU data in the IIT Kharagpur Inter-Hall Data Analytics competition. Improved forecast accuracy from 48.63% MAPE (ARIMA baseline) to 1.31% MAPE using an LSTM neural network.",
-      technologies: ["Python", "LSTM", "Time Series", "ARIMA Baseline", "Pandas", "NumPy"],
+      description: "Won 1st place in the IIT Kharagpur Inter-Hall Data Analytics competition by forecasting warehouse SKU demand. Built an LSTM neural network on 2+ years of SKU history, improving accuracy from 48.6% to 1.31% MAPE.",
+      technologies: ["Python", "LSTM", "Time-Series", "Pandas", "NumPy"],
       category: "ml",
       link: "#",
       isLive: false
     },
     {
-      title: "Clutch Performance Detection in T20 Cricket",
+      title: "Clutch Performance in T20 Cricket",
       year: "2024",
-      description: "Engineered a win probability model using logistic regression on over 15K deliveries to quantify clutch performance. Improved player ranking accuracy by 37% through Bayesian inference and data processing of over 1M deliveries.",
-      technologies: ["Python", "Streamlit", "Logistic Regression", "Bayesian Inference", "Pandas"],
+      description: "Developed a win probability model using logistic regression and Bayesian inference on 1M+ ball-by-ball deliveries to measure how cricketers perform under extreme match pressure.",
+      technologies: ["Python", "Streamlit", "Bayesian Inference", "Pandas"],
       category: "ml",
       link: "#",
       isLive: false
     },
     {
-      title: "Zero-Shot CLIP-Based Defect Classification",
+      title: "Zero-Shot Defect Classification",
       year: "2023",
-      description: "Developed a zero-shot defect classification pipeline for industrial quality inspection using CLIP and Vision Transformer (ViT) architectures. Achieved 72% accuracy on the MVTec-AD benchmark dataset.",
-      technologies: ["Python", "PyTorch", "CLIP", "Vision Transformer", "Computer Vision"],
+      description: "Built a zero-shot defect classification model for manufacturing lines using CLIP and Vision Transformers (ViT), achieving 72% accuracy on the MVTec-AD benchmark without task-specific training data.",
+      technologies: ["Python", "PyTorch", "CLIP", "Vision Transformers"],
       category: "cv",
       link: "#",
       isLive: false
@@ -111,37 +111,37 @@ export default function Projects() {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-16 px-4">
-      {/* Enhanced header */}
-      <div className="text-center mb-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-pink-50 text-pink-700 text-xs font-semibold rounded-full uppercase tracking-wider mb-2 border border-pink-200">
-          Portfolio & Engineering
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
-          Featured Projects & Client Work
+    <section id="projects" className="py-12 md:py-16">
+      {/* Header */}
+      <div className="mb-8">
+        <span className="text-xs font-bold uppercase tracking-wider text-pink-600">
+          Portfolio
+        </span>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-1 mb-2">
+          Projects & Client Work
         </h2>
-        <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
-          A showcase of live freelance web applications, enterprise platforms, and machine learning research projects.
+        <p className="text-gray-600 text-sm md:text-base max-w-2xl">
+          A selection of live client websites, machine learning models, and software tools I've built.
         </p>
       </div>
 
       {/* Category filter tabs */}
-      <div className="flex flex-wrap justify-center gap-2.5 mb-10 max-w-3xl mx-auto">
+      <div className="flex flex-wrap gap-2 mb-8">
         {categories.map((category) => (
           <button
             key={category.id}
             onClick={() => setSelectedCategory(category.id)}
-            className={`px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition-all duration-200 cursor-pointer ${
+            className={`px-3.5 py-1.5 rounded-lg text-xs md:text-sm font-medium transition-all duration-150 cursor-pointer ${
               selectedCategory === category.id
-                ? 'bg-pink-600 text-white shadow-md shadow-pink-200'
-                : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-gray-300'
+                ? 'bg-pink-600 text-white shadow-xs'
+                : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
             }`}
           >
             {category.label}
-            <span className={`ml-2 px-2 py-0.5 text-xs rounded-full font-semibold ${
+            <span className={`ml-1.5 px-1.5 py-0.2 text-xs rounded font-semibold ${
               selectedCategory === category.id
                 ? 'bg-white/20 text-white'
-                : 'bg-gray-100 text-gray-600'
+                : 'bg-gray-100 text-gray-500'
             }`}>
               {category.count}
             </span>
@@ -150,7 +150,7 @@ export default function Projects() {
       </div>
 
       {/* Projects grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.title}
